@@ -1,0 +1,13 @@
+# Signo de dolar / esto significa 
+# Que una cadena termine en tal 
+# ejemplo:
+
+import re
+texto = {'andres@gmail.com','andres@hotmail.com','andrea@yahoo.com'}
+print(re.findall('\w+@gmail.com$',texto))
+print(texto)
+
+# import re
+# texto = "aquellos que no conocen la historia estan condenados a repetirla - Edmund Burke"
+# resultado = re.split("no",texto)
+# print(resultado)

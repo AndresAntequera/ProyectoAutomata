@@ -18,15 +18,15 @@ B = {'a','b'}
 #-----------------------------------------
  #Potencia 
 
- E = 'nose'
- print(E*2)
+#  E = 'nose'
+#  print(E*2)
 
-#-----------------------------------------# Producto Cruz / Concatenacion
-def productoCruz(A,B):
-    pCruz = [(i, j) for i in A for j in B]
-    return pCruz
+# #-----------------------------------------# Producto Cruz / Concatenacion
+# def productoCruz(A,B):
+#     pCruz = [(i, j) for i in A for j in B]
+#     return pCruz
 
-print(productoCruz(A,B))
+# print(productoCruz(A,B))
 
 #------------------------------------------
 

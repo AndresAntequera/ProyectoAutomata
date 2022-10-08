@@ -18,3 +18,4 @@ import re
 import re
 texto = "aquellos que no conocen la historia estan condenados a repetirla - Edmund Burke"
 resultado = re.split(" ",texto)
+print(resultado)

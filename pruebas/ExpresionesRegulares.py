@@ -1,8 +1,8 @@
 #----------------------------
 
-import re
-texto = input()
-print(re.search("Hola",texto)) 
+# import re
+# texto = input()
+# print(re.search("Hola",texto)) 
 # El search es para buscar una palabra en si
 
 #----------------------------
@@ -19,12 +19,12 @@ print(re.search("Hola",texto))
 # Es parecido al findall pero retorna un objeto iterator, 
 # obtiene objetos tipo match
 
-# import re
-# texto = input()
-# i = 0
-# for item in re.finditer("is",texto):
-#     print(item,i)
-#     i+=1
+import re
+texto = input()
+i = 0
+for item in re.finditer("is",texto):
+    print(item,i)
+    i+=1
 
 
 #----------------------------
