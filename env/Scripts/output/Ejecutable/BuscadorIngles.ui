@@ -95,11 +95,11 @@ front: 87 12pt &quot;Arial Black&quot;;
 }</string>
          </property>
          <property name="text">
-          <string>  MENU</string>
+          <string>MENU</string>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>assets/MENU.png</normaloff>assets/MENU.png</iconset>
+           <normaloff>./assets/MENU.png</normaloff>./assets/MENU.png</iconset>
          </property>
         </widget>
        </item>
@@ -219,7 +219,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/pngwing.com.png</normaloff>assets/pngwing.com.png</iconset>
+              <normaloff>./assets/pngwing.com.png</normaloff>./assets/pngwing.com.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -244,11 +244,11 @@ font: 75 12pt&quot;Arial Narrow&quot;;
              </size>
             </property>
             <property name="text">
-             <string> SEEKER</string>
+             <string>SEARCH</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/LUPA.png</normaloff>assets/LUPA.png</iconset>
+              <normaloff>./assets/LUPA.png</normaloff>./assets/LUPA.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -291,7 +291,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/España.png</normaloff>assets/España.png</iconset>
+              <normaloff>./assets/España.png</normaloff>./assets/España.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -320,13 +320,60 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/USA.webp</normaloff>assets/USA.webp</iconset>
+              <normaloff>./assets/USA.webp</normaloff>./assets/USA.webp</iconset>
             </property>
             <property name="iconSize">
              <size>
               <width>32</width>
               <height>32</height>
              </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>               SPEED </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="RadioIngles1">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>      x 0.5</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="RadioIngles2">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>      x 1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="RadioIngles3">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>      x 1.5</string>
             </property>
            </widget>
           </item>
@@ -352,7 +399,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
              </font>
             </property>
             <property name="text">
-             <string>Proyect - Automaton</string>
+             <string>Proyect - Automata</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -403,7 +450,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>assets/robot.png</normaloff>assets/robot.png</iconset>
+                  <normaloff>./assets/robot.png</normaloff>./assets/robot.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -465,7 +512,7 @@ front: 87 12pt &quot;Arial Black&quot;;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>assets/LUPA.png</normaloff>assets/LUPA.png</iconset>
+                   <normaloff>./assets/LUPA.png</normaloff>./assets/LUPA.png</iconset>
                  </property>
                 </widget>
                 <widget class="QLabel" name="Etiqueta">
@@ -495,7 +542,7 @@ front: 87 12pt &quot;Arial Black&quot;;
 </string>
                  </property>
                  <property name="text">
-                  <string>Automaton expresion |   A*(B U C)*</string>
+                  <string>AUTOMATA EXPRESSION |   A*(B U C)*</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -529,42 +576,332 @@ front: 87 12pt &quot;Arial Black&quot;;
                  <property name="styleSheet">
                   <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
-                 <property name="text">
-                  <string/>
-                 </property>
                  <property name="placeholderText">
-                  <string>Insert word  you want to search</string>
+                  <string>Insert the word you want to search for</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="automata">
+                <widget class="QFrame" name="frame">
                  <property name="geometry">
                   <rect>
-                   <x>40</x>
+                   <x>30</x>
                    <y>160</y>
-                   <width>541</width>
-                   <height>381</height>
+                   <width>551</width>
+                   <height>421</height>
                   </rect>
                  </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton{
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <widget class="QLabel" name="Q0">
+                  <property name="geometry">
+                   <rect>
+                    <x>90</x>
+                    <y>170</y>
+                    <width>31</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string> Q0</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="Q0_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>89</x>
+                    <y>170</y>
+                    <width>81</width>
+                    <height>71</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="Q1_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>240</x>
+                    <y>50</y>
+                    <width>31</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="Q1">
+                  <property name="geometry">
+                   <rect>
+                    <x>240</x>
+                    <y>50</y>
+                    <width>31</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string> Q1</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="Q2">
+                  <property name="geometry">
+                   <rect>
+                    <x>390</x>
+                    <y>170</y>
+                    <width>31</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string> Q2</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="Q2_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>390</x>
+                    <y>170</y>
+                    <width>31</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton">
+                  <property name="geometry">
+                   <rect>
+                    <x>50</x>
+                    <y>60</y>
+                    <width>291</width>
+                    <height>201</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:0px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>./assets/AA.png</normaloff>./assets/AA.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>130</width>
+                    <height>100</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>290</x>
+                    <y>10</y>
+                    <width>161</width>
+                    <height>71</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
 border:0px;
 }
-
-background-color: rgb(55, 150, 131);</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normaloff>assets/automata2.png</normaloff>assets/automata2.png</iconset>
-                 </property>
-                 <property name="iconSize">
-                  <size>
-                   <width>600</width>
-                   <height>600</height>
-                  </size>
-                 </property>
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>./assets/A.jpg</normaloff>./assets/A.jpg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>120</width>
+                    <height>70</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>440</x>
+                    <y>180</y>
+                    <width>121</width>
+                    <height>61</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:0px;
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>./assets/BC.png</normaloff>./assets/BC.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>100</width>
+                    <height>80</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>200</x>
+                    <y>260</y>
+                    <width>171</width>
+                    <height>71</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:0px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>./assets/B.png</normaloff>./assets/B.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>150</width>
+                    <height>90</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>340</x>
+                    <y>130</y>
+                    <width>51</width>
+                    <height>101</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:0px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>./assets/C(3).png</normaloff>./assets/C(3).png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>100</width>
+                    <height>90</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>210</x>
+                    <y>220</y>
+                    <width>161</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:0px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>./assets/C_inferior.png</normaloff>./assets/C_inferior.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>150</width>
+                    <height>90</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_7">
+                  <property name="geometry">
+                   <rect>
+                    <x>330</x>
+                    <y>90</y>
+                    <width>131</width>
+                    <height>131</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:0px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>./assets/BDerecho.png</normaloff>./assets/BDerecho.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>60</width>
+                    <height>100</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <zorder>pushButton_7</zorder>
+                 <zorder>pushButton_5</zorder>
+                 <zorder>pushButton_3</zorder>
+                 <zorder>pushButton_2</zorder>
+                 <zorder>pushButton</zorder>
+                 <zorder>Q0_2</zorder>
+                 <zorder>Q0</zorder>
+                 <zorder>Q1_2</zorder>
+                 <zorder>Q1</zorder>
+                 <zorder>Q2_2</zorder>
+                 <zorder>Q2</zorder>
+                 <zorder>pushButton_4</zorder>
+                 <zorder>pushButton_6</zorder>
                 </widget>
                </widget>
               </item>

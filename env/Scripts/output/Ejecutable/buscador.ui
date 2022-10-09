@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>857</width>
-    <height>699</height>
+    <width>847</width>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -331,6 +331,53 @@ font: 75 12pt&quot;Arial Narrow&quot;;
            </widget>
           </item>
           <item>
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>        VELOCIDADES</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Radio1">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>    X 0.5</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Radio2">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>    X 1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Radio3">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>    X 1.5</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="verticalSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -403,7 +450,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>assets/robot.png</normaloff>assets/robot.png</iconset>
+                  <normaloff>./assets/robot.png</normaloff>./assets/robot.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -692,7 +739,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>./assets/A.png</normaloff>./assets/A.png</iconset>
+                    <normaloff>./assets/A.jpg</normaloff>./assets/A.jpg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -777,7 +824,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>./assets/C (3).png</normaloff>./assets/C (3).png</iconset>
+                    <normaloff>./assets/C.png</normaloff>./assets/C.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -842,6 +889,34 @@ border:0px;
                    </size>
                   </property>
                  </widget>
+                 <widget class="QPushButton" name="pushButton_8">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>240</y>
+                    <width>81</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:0px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>./assets/Inicio.png</normaloff>./assets/Inicio.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>60</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
                  <zorder>pushButton_7</zorder>
                  <zorder>pushButton_5</zorder>
                  <zorder>pushButton_3</zorder>
@@ -855,6 +930,7 @@ border:0px;
                  <zorder>Q2</zorder>
                  <zorder>pushButton_4</zorder>
                  <zorder>pushButton_6</zorder>
+                 <zorder>pushButton_8</zorder>
                 </widget>
                </widget>
               </item>

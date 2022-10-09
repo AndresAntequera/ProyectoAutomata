@@ -49,7 +49,7 @@ class Ui_MainWindow(object):
 "front: 87 12pt \"Arial Black\";\n"
 "}")
         icon = QIcon()
-        icon.addFile(u"assets/MENU.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"./assets/MENU.png", QSize(), QIcon.Normal, QIcon.Off)
         self.bt_menu.setIcon(icon)
 
         self.horizontalLayout_2.addWidget(self.bt_menu)
@@ -103,7 +103,7 @@ class Ui_MainWindow(object):
         self.BotonInicio.setMinimumSize(QSize(0, 40))
         self.BotonInicio.setMaximumSize(QSize(16777215, 40))
         icon1 = QIcon()
-        icon1.addFile(u"assets/pngwing.com.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u"./assets/pngwing.com.png", QSize(), QIcon.Normal, QIcon.Off)
         self.BotonInicio.setIcon(icon1)
         self.BotonInicio.setIconSize(QSize(32, 32))
 
@@ -114,7 +114,7 @@ class Ui_MainWindow(object):
         self.Buscador.setMinimumSize(QSize(0, 40))
         self.Buscador.setMaximumSize(QSize(16777215, 40))
         icon2 = QIcon()
-        icon2.addFile(u"assets/LUPA.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u"./assets/LUPA.png", QSize(), QIcon.Normal, QIcon.Off)
         self.Buscador.setIcon(icon2)
         self.Buscador.setIconSize(QSize(32, 32))
 
@@ -135,7 +135,7 @@ class Ui_MainWindow(object):
         self.Spanish.setMinimumSize(QSize(0, 40))
         self.Spanish.setMaximumSize(QSize(16777215, 40))
         icon3 = QIcon()
-        icon3.addFile(u"assets/Espa\u00f1a.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u"./assets/Espa\u00f1a.png", QSize(), QIcon.Normal, QIcon.Off)
         self.Spanish.setIcon(icon3)
         self.Spanish.setIconSize(QSize(32, 32))
 
@@ -146,11 +146,38 @@ class Ui_MainWindow(object):
         self.English.setMinimumSize(QSize(0, 40))
         self.English.setMaximumSize(QSize(16777215, 40))
         icon4 = QIcon()
-        icon4.addFile(u"assets/USA.webp", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u"./assets/USA.webp", QSize(), QIcon.Normal, QIcon.Off)
         self.English.setIcon(icon4)
         self.English.setIconSize(QSize(32, 32))
 
         self.verticalLayout_3.addWidget(self.English)
+
+        self.label_4 = QLabel(self.lateral)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setFont(font)
+
+        self.verticalLayout_3.addWidget(self.label_4)
+
+        self.RadioIngles1 = QRadioButton(self.lateral)
+        self.RadioIngles1.setObjectName(u"RadioIngles1")
+        self.RadioIngles1.setStyleSheet(u"margin:15px auto;\n"
+"font: 75 12pt \"MS Shell Dlg 2\";")
+
+        self.verticalLayout_3.addWidget(self.RadioIngles1)
+
+        self.RadioIngles2 = QRadioButton(self.lateral)
+        self.RadioIngles2.setObjectName(u"RadioIngles2")
+        self.RadioIngles2.setStyleSheet(u"margin:15px auto;\n"
+"font: 75 12pt \"MS Shell Dlg 2\";")
+
+        self.verticalLayout_3.addWidget(self.RadioIngles2)
+
+        self.RadioIngles3 = QRadioButton(self.lateral)
+        self.RadioIngles3.setObjectName(u"RadioIngles3")
+        self.RadioIngles3.setStyleSheet(u"margin:15px auto;\n"
+"font: 75 12pt \"MS Shell Dlg 2\";")
+
+        self.verticalLayout_3.addWidget(self.RadioIngles3)
 
         self.verticalSpacer = QSpacerItem(20, 297, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -187,7 +214,7 @@ class Ui_MainWindow(object):
         self.imagenrobot.setObjectName(u"imagenrobot")
         self.imagenrobot.setStyleSheet(u"background-color: rgb(55, 150, 131);")
         icon5 = QIcon()
-        icon5.addFile(u"assets/robot.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon5.addFile(u"./assets/robot.png", QSize(), QIcon.Normal, QIcon.Off)
         self.imagenrobot.setIcon(icon5)
         self.imagenrobot.setIconSize(QSize(500, 500))
 
@@ -279,7 +306,7 @@ class Ui_MainWindow(object):
 "border:0px;\n"
 "}")
         icon6 = QIcon()
-        icon6.addFile(u"assets/AA.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon6.addFile(u"./assets/AA.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton.setIcon(icon6)
         self.pushButton.setIconSize(QSize(130, 100))
         self.pushButton_2 = QPushButton(self.frame)
@@ -290,7 +317,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon7 = QIcon()
-        icon7.addFile(u"assets/A.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon7.addFile(u"./assets/A.jpg", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_2.setIcon(icon7)
         self.pushButton_2.setIconSize(QSize(120, 70))
         self.pushButton_3 = QPushButton(self.frame)
@@ -301,7 +328,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon8 = QIcon()
-        icon8.addFile(u"assets/BC.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u"./assets/BC.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_3.setIcon(icon8)
         self.pushButton_3.setIconSize(QSize(100, 80))
         self.pushButton_4 = QPushButton(self.frame)
@@ -311,7 +338,7 @@ class Ui_MainWindow(object):
 "border:0px;\n"
 "}")
         icon9 = QIcon()
-        icon9.addFile(u"assets/B.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon9.addFile(u"./assets/B.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_4.setIcon(icon9)
         self.pushButton_4.setIconSize(QSize(150, 90))
         self.pushButton_5 = QPushButton(self.frame)
@@ -321,7 +348,7 @@ class Ui_MainWindow(object):
 "border:0px;\n"
 "}")
         icon10 = QIcon()
-        icon10.addFile(u"assets/C (3).png", QSize(), QIcon.Normal, QIcon.Off)
+        icon10.addFile(u"./assets/C(3).png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_5.setIcon(icon10)
         self.pushButton_5.setIconSize(QSize(100, 90))
         self.pushButton_6 = QPushButton(self.frame)
@@ -331,7 +358,7 @@ class Ui_MainWindow(object):
 "border:0px;\n"
 "}")
         icon11 = QIcon()
-        icon11.addFile(u"assets/C_inferior.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon11.addFile(u"./assets/C_inferior.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_6.setIcon(icon11)
         self.pushButton_6.setIconSize(QSize(150, 90))
         self.pushButton_7 = QPushButton(self.frame)
@@ -341,7 +368,7 @@ class Ui_MainWindow(object):
 "border:0px;\n"
 "}")
         icon12 = QIcon()
-        icon12.addFile(u"assets/BDerecho.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon12.addFile(u"./assets/BDerecho.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_7.setIcon(icon12)
         self.pushButton_7.setIconSize(QSize(60, 100))
         self.pushButton_7.raise_()
@@ -388,6 +415,10 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"               IDIOM", None))
         self.Spanish.setText(QCoreApplication.translate("MainWindow", u"SPANISH", None))
         self.English.setText(QCoreApplication.translate("MainWindow", u"ENGLISH", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"               SPEED ", None))
+        self.RadioIngles1.setText(QCoreApplication.translate("MainWindow", u"      x 0.5", None))
+        self.RadioIngles2.setText(QCoreApplication.translate("MainWindow", u"      x 1", None))
+        self.RadioIngles3.setText(QCoreApplication.translate("MainWindow", u"      x 1.5", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Proyect - Automata", None))
         self.imagenrobot.setText("")
         self.BotonBuscar.setText(QCoreApplication.translate("MainWindow", u"Search", None))

@@ -1,10 +1,8 @@
 from time import sleep
-from turtle import width
 from PyQt5 import QtWidgets,QtGui,uic,QtCore
 from PyQt5.QtCore import QPropertyAnimation,QUrl
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
-from Grafo import buscar,g  
-import sys,os
+from Grafo import buscar,grafo 
 
 
 # import QtMultimedia
@@ -59,38 +57,41 @@ BuscadorIngles.Spanish.clicked.connect(Vinicio)
 
 def buscar_palabra():
     palabra = buscador.BuscarPalabra.text()
-    estado = buscar(g,palabra.upper())
-    
-    mostrarTransicion(g,palabra.upper(),0.5)
-        
+    estado = buscar(grafo,palabra.upper())
+
+    if buscador.Radio3.isChecked():
+        mostrarTransicion(grafo,palabra.upper(),0.2)
+    elif buscador.Radio1.isChecked():
+        mostrarTransicion(grafo,palabra.upper(),1.3)
+    elif buscador.Radio2.isChecked():
+        mostrarTransicion(grafo,palabra.upper(),0.6)
+    else:
+        mostrarTransicion(grafo,palabra.upper(),0.6)
+
+
     if estado == "aceptado":
         buscador.RespuestAN.setText("ACEPTADO")
     else:
         buscador.RespuestAN.setText("DENEGADO")
         
+
 buscador.BotonBuscar.clicked.connect(buscar_palabra)
 
 
-def Vlento():
-    buscar_palabra(1)
-
-def Vnormal():
-    buscar_palabra(.5)
-
-def Vrapido():
-    buscar_palabra(.2)
-
-
-    
-
-buscador.lento.clicked.connect(Vlento)
-buscador.normal.clicked.connect(Vnormal)
-buscador.rapido.clicked.connect(Vrapido)
-
 def buscar_palabraIngles():
     palabra = BuscadorIngles.BuscarPalabra.text()
-    estado = buscar(g,palabra.upper())
-    mostrarTransicionIngles(g,palabra.upper())
+    estado = buscar(grafo,palabra.upper())
+
+    if BuscadorIngles.RadioIngles3.isChecked():
+        mostrarTransicionIngles(grafo,palabra.upper(),0.2)
+    elif BuscadorIngles.RadioIngles1.isChecked():
+        mostrarTransicionIngles(grafo,palabra.upper(),1.3)
+    elif BuscadorIngles.RadioIngles2.isChecked():
+        mostrarTransicionIngles(grafo,palabra.upper(),0.6)
+    else:
+        mostrarTransicionIngles(grafo,palabra.upper(),0.6)
+
+
     if estado == "aceptado":
         BuscadorIngles.RespuestaIngles.setText("ACCEPTED")
     else:
@@ -99,7 +100,7 @@ def buscar_palabraIngles():
 BuscadorIngles.BotonBuscar.clicked.connect(buscar_palabraIngles)
 
 
-#Primer Nodo
+#Primer Nodo español
 label_1 = buscador.Q0 
 label_1.move(100, 220) 
 label_1.resize(80, 80)
@@ -111,7 +112,7 @@ label_2.resize(90,90)
 label_2.setAlignment(QtCore.Qt.AlignCenter)
 label_2.setStyleSheet("border: 3px solid black; border-radius: 45px;")
 
-#Segundo Nodo
+#Segundo Nodo español
 label_3 = buscador.Q1
 label_3.move(260, 60) 
 label_3.resize(80, 80)
@@ -123,7 +124,7 @@ label_4.resize(90,90)
 label_4.setAlignment(QtCore.Qt.AlignCenter)
 label_4.setStyleSheet("border: 3px solid black; border-radius: 45px;")
 
-#Tercer Nodo
+#Tercer Nodo español
 label_5 = buscador.Q2
 label_5.move(390, 220) 
 label_5.resize(80, 80)
@@ -138,7 +139,7 @@ label_6.setStyleSheet("border: 3px solid black; border-radius: 45px;")
 #ingles visualizador
 
 
-#Primer Nodo
+#Primer Nodo ingles
 label_1_ingles = BuscadorIngles.Q0 
 label_1_ingles.move(100, 220) 
 label_1_ingles.resize(80, 80)
@@ -150,7 +151,7 @@ label_2_ingles.resize(90,90)
 label_2_ingles.setAlignment(QtCore.Qt.AlignCenter)
 label_2_ingles.setStyleSheet("border: 3px solid black; border-radius: 45px;")
 
-#Segundo Nodo
+#Segundo Nodo ingles
 label_3_ingles = BuscadorIngles.Q1
 label_3_ingles.move(260, 60) 
 label_3_ingles.resize(80, 80)
@@ -162,7 +163,7 @@ label_4_ingles.resize(90,90)
 label_4_ingles.setAlignment(QtCore.Qt.AlignCenter)
 label_4_ingles.setStyleSheet("border: 3px solid black; border-radius: 45px;")
 
-#Tercer Nodo
+#Tercer Nodo ingles
 label_5_ingles = BuscadorIngles.Q2
 label_5_ingles.move(390, 220) 
 label_5_ingles.resize(80, 80)
@@ -173,20 +174,9 @@ label_6_ingles.move(385, 215)
 label_6_ingles.resize(90,90)
 label_6_ingles.setAlignment(QtCore.Qt.AlignCenter)
 label_6_ingles.setStyleSheet("border: 3px solid black; border-radius: 45px;")
-
-
-# player = QMediaPlayer()
- 
-# def playAudioFile():
-#         full_file_path = os.path.join(os.getcwd(), 'aceptado.mp3')
-#         url = QUrl.fromLocalFile(full_file_path)
-#         content = QMediaContent(url)
-
-#         player.setMedia(content)
-#         player.play()
                 
 
-def mostrarTransicion(g,palabra,veloz):
+def mostrarTransicion(grafo,palabra,veloz):
     c = 0
     nodo = 0
     acumulado = ""
@@ -200,13 +190,22 @@ def mostrarTransicion(g,palabra,veloz):
     else:
         for i in palabra:
             c+=1
-            if g.get_edge_data("q0","q1")['A']['attr'] == i and nodo==0:
+            if grafo.get_edge_data("q0","q1")['A']['attr'] == i and nodo==0:
                 acumulado+=i
                 label_1.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
                 label_1.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 nodo = 1
+
+                buscador.pushButton.setIcon(QtGui.QIcon('./assets/ABlanco.png'))
+                buscador.pushButton.setIconSize(QtCore.QSize(130,100))
+                QtWidgets.QApplication.processEvents()
+                sleep(veloz)
+                buscador.pushButton.setIcon(QtGui.QIcon('./assets/AA.png'))
+                buscador.pushButton.setIconSize(QtCore.QSize(130,100))
+
+
                 label_3.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
@@ -216,13 +215,21 @@ def mostrarTransicion(g,palabra,veloz):
                     return
                 else:
                     continue
-            elif g.get_edge_data("q1","q1")['A']['attr'] == i and nodo==1:
+            elif grafo.get_edge_data("q1","q1")['A']['attr'] == i and nodo==1:
                 acumulado+=i
                 label_3.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
                 label_3.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 nodo = 1
+
+                buscador.pushButton_2.setIcon(QtGui.QIcon('./assets/A.Blanco.png'))
+                buscador.pushButton_2.setIconSize(QtCore.QSize(120,70))
+                QtWidgets.QApplication.processEvents()
+                sleep(veloz)
+                buscador.pushButton_2.setIcon(QtGui.QIcon('./assets/A.jpg'))
+                buscador.pushButton_2.setIconSize(QtCore.QSize(120,70))
+
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
                 label_3.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
@@ -234,13 +241,29 @@ def mostrarTransicion(g,palabra,veloz):
                     return
                 else:
                     continue
-            elif (g.get_edge_data("q1","q2")['B']['attr'] == i or g.get_edge_data("q1","q2")['C']['attr'] == i) and nodo == 1:
+            elif (grafo.get_edge_data("q1","q2")['B']['attr'] == i or grafo.get_edge_data("q1","q2")['C']['attr'] == i) and nodo == 1:
                 acumulado+=i
                 label_3.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
                 label_3.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
-                nodo=2
+                nodo = 2
+
+                if i == 'C' or i == 'c':
+                    buscador.pushButton_5.setIcon(QtGui.QIcon('./assets/CBlanco.png'))
+                    buscador.pushButton_5.setIconSize(QtCore.QSize(100,90))
+                    QtWidgets.QApplication.processEvents()
+                    sleep(veloz)
+                    buscador.pushButton_5.setIcon(QtGui.QIcon('./assets/C.png'))
+                    buscador.pushButton_5.setIconSize(QtCore.QSize(120,70))
+                else:
+                    buscador.pushButton_7.setIcon(QtGui.QIcon('./assets/BDBLANCO.png'))
+                    buscador.pushButton_7.setIconSize(QtCore.QSize(60,100))
+                    QtWidgets.QApplication.processEvents()
+                    sleep(veloz)
+                    buscador.pushButton_7.setIcon(QtGui.QIcon('./assets/BDerecho.png'))
+                    buscador.pushButton_7.setIconSize(QtCore.QSize(60,100))
+
                 label_5.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
@@ -249,7 +272,7 @@ def mostrarTransicion(g,palabra,veloz):
                     return 
                 else:
                     continue
-            elif (g.get_edge_data("q2","q2")['B']['attr'] == i or g.get_edge_data("q2","q2")['C']['attr'] == i) and nodo==2:
+            elif (grafo.get_edge_data("q2","q2")['B']['attr'] == i or grafo.get_edge_data("q2","q2")['C']['attr'] == i) and nodo==2:
                 acumulado+=i
                 label_5.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
@@ -257,6 +280,13 @@ def mostrarTransicion(g,palabra,veloz):
                 label_5.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 nodo = 2
                 
+                buscador.pushButton_3.setIcon(QtGui.QIcon('./assets/BCBlanco.png'))
+                buscador.pushButton_3.setIconSize(QtCore.QSize(100,80))
+                QtWidgets.QApplication.processEvents()
+                sleep(veloz)
+                buscador.pushButton_3.setIcon(QtGui.QIcon('./assets/BC.png'))
+                buscador.pushButton_3.setIconSize(QtCore.QSize(100,80))
+
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
                 label_5.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
@@ -268,7 +298,7 @@ def mostrarTransicion(g,palabra,veloz):
                     return 
                 else:
                     continue
-            elif (g.get_edge_data("q0","q2")['B']['attr'] == i or g.get_edge_data("q0","q2")['C']['attr'] == i) and nodo==0:
+            elif (grafo.get_edge_data("q0","q2")['B']['attr'] == i or grafo.get_edge_data("q0","q2")['C']['attr'] == i) and nodo==0:
                 acumulado+=i
                 label_1.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
@@ -276,6 +306,23 @@ def mostrarTransicion(g,palabra,veloz):
                 label_1.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
 
                 nodo = 2
+
+                if i == 'B' or i == 'b':
+                    buscador.pushButton_4.setIcon(QtGui.QIcon('./assets/BBlanco.png'))
+                    buscador.pushButton_4.setIconSize(QtCore.QSize(100,90))
+                    QtWidgets.QApplication.processEvents()
+                    sleep(veloz)
+                    buscador.pushButton_4.setIcon(QtGui.QIcon('./assets/B.png'))
+                    buscador.pushButton_4.setIconSize(QtCore.QSize(120,70))
+                else:
+                    buscador.pushButton_6.setIcon(QtGui.QIcon('./assets/C_inferiorBlanco.png'))
+                    buscador.pushButton_6.setIconSize(QtCore.QSize(150,90))
+                    QtWidgets.QApplication.processEvents()
+                    sleep(veloz)
+                    buscador.pushButton_6.setIcon(QtGui.QIcon('./assets/C_inferior.png'))
+                    buscador.pushButton_6.setIconSize(QtCore.QSize(150,90))
+
+
                 label_5.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
@@ -288,7 +335,7 @@ def mostrarTransicion(g,palabra,veloz):
                 return 
 
 
-def mostrarTransicionIngles(g,palabra):
+def mostrarTransicionIngles(grafo,palabra,veloz):
     c = 0
     nodo = 0
     acumulado = ""
@@ -296,90 +343,147 @@ def mostrarTransicionIngles(g,palabra):
     if palabra == "":
         label_1_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
         QtWidgets.QApplication.processEvents()
-        sleep(1)
-        label_1.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
+        sleep(veloz)
+        label_1_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
     else:
         for i in palabra:
             c+=1
-            if g.get_edge_data("q0","q1")['A']['attr'] == i and nodo==0:
+            if grafo.get_edge_data("q0","q1")['A']['attr'] == i and nodo==0:
                 acumulado+=i
                 label_1_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
-                sleep(1)
+                sleep(veloz)
                 label_1_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 nodo = 1
+
+                BuscadorIngles.pushButton.setIcon(QtGui.QIcon('./assets/ABlanco.png'))
+                BuscadorIngles.pushButton.setIconSize(QtCore.QSize(130,100))
+                QtWidgets.QApplication.processEvents()
+                sleep(veloz)
+                BuscadorIngles.pushButton.setIcon(QtGui.QIcon('./assets/AA.png'))
+                BuscadorIngles.pushButton.setIconSize(QtCore.QSize(130,100))
+
+
                 label_3_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
-                sleep(1)
+                sleep(veloz)
                 label_3_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 
                 if len(palabra) == c and acumulado==palabra:
                     return
                 else:
                     continue
-            elif g.get_edge_data("q1","q1")['A']['attr'] == i and nodo==1:
+            elif grafo.get_edge_data("q1","q1")['A']['attr'] == i and nodo==1:
                 acumulado+=i
                 label_3_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
-                sleep(.5)
+                sleep(veloz)
                 label_3_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 nodo = 1
+
+                BuscadorIngles.pushButton_2.setIcon(QtGui.QIcon('./assets/A.Blanco.png'))
+                BuscadorIngles.pushButton_2.setIconSize(QtCore.QSize(120,70))
                 QtWidgets.QApplication.processEvents()
-                sleep(.5)
+                sleep(veloz)
+                BuscadorIngles.pushButton_2.setIcon(QtGui.QIcon('./assets/A.jpg'))
+                BuscadorIngles.pushButton_2.setIconSize(QtCore.QSize(120,70))
+
+                QtWidgets.QApplication.processEvents()
+                sleep(veloz)
                 label_3_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
-                sleep(.5)
+                sleep(veloz)
                 label_3_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 
                 if len(palabra) == c and acumulado==palabra:
                     return
                 else:
                     continue
-            elif (g.get_edge_data("q1","q2")['B']['attr'] == i or g.get_edge_data("q1","q2")['C']['attr'] == i) and nodo == 1:
+            elif (grafo.get_edge_data("q1","q2")['B']['attr'] == i or grafo.get_edge_data("q1","q2")['C']['attr'] == i) and nodo == 1:
                 acumulado+=i
                 label_3_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
-                sleep(1)
+                sleep(veloz)
                 label_3_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 nodo=2
+                
+                if i == 'C' or i == 'c':
+                    BuscadorIngles.pushButton_5.setIcon(QtGui.QIcon('./assets/CBlanco.png'))
+                    BuscadorIngles.pushButton_5.setIconSize(QtCore.QSize(100,90))
+                    QtWidgets.QApplication.processEvents()
+                    sleep(veloz)
+                    BuscadorIngles.pushButton_5.setIcon(QtGui.QIcon('./assets/C.png'))
+                    BuscadorIngles.pushButton_5.setIconSize(QtCore.QSize(120,70))
+                else:
+                    BuscadorIngles.pushButton_7.setIcon(QtGui.QIcon('./assets/BDBLANCO.png'))
+                    BuscadorIngles.pushButton_7.setIconSize(QtCore.QSize(60,100))
+                    QtWidgets.QApplication.processEvents()
+                    sleep(veloz)
+                    BuscadorIngles.pushButton_7.setIcon(QtGui.QIcon('./assets/BDerecho.png'))
+                    BuscadorIngles.pushButton_7.setIconSize(QtCore.QSize(60,100))
+
+                
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
-                sleep(1)
+                sleep(veloz)
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 if len(palabra) == c and acumulado==palabra:
                     return 
                 else:
                     continue
-            elif (g.get_edge_data("q2","q2")['B']['attr'] == i or g.get_edge_data("q2","q2")['C']['attr'] == i) and nodo==2:
+            elif (grafo.get_edge_data("q2","q2")['B']['attr'] == i or grafo.get_edge_data("q2","q2")['C']['attr'] == i) and nodo==2:
                 acumulado+=i
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
-                sleep(.5)
+                sleep(veloz)
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 nodo = 2
                 
+                BuscadorIngles.pushButton_3.setIcon(QtGui.QIcon('./assets/BCBlanco.png'))
+                BuscadorIngles.pushButton_3.setIconSize(QtCore.QSize(100,80))
                 QtWidgets.QApplication.processEvents()
-                sleep(.5)
+                sleep(veloz)
+                BuscadorIngles.pushButton_3.setIcon(QtGui.QIcon('./assets/BC.png'))
+                BuscadorIngles.pushButton_3.setIconSize(QtCore.QSize(100,80))
+                
+                
+                QtWidgets.QApplication.processEvents()
+                sleep(veloz)
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
-                sleep(.5)
+                sleep(veloz)
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 
                 if len(palabra) == c and acumulado==palabra:
                     return 
                 else:
                     continue
-            elif (g.get_edge_data("q0","q2")['B']['attr'] == i or g.get_edge_data("q0","q2")['C']['attr'] == i) and nodo==0:
+            elif (grafo.get_edge_data("q0","q2")['B']['attr'] == i or grafo.get_edge_data("q0","q2")['C']['attr'] == i) and nodo==0:
                 acumulado+=i
                 label_1_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
-                sleep(1)
+                sleep(veloz)
                 label_1_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
-
                 nodo = 2
+                
+                if i == 'B' or i == 'b':
+                    BuscadorIngles.pushButton_4.setIcon(QtGui.QIcon('./assets/BBlanco.png'))
+                    BuscadorIngles.pushButton_4.setIconSize(QtCore.QSize(100,90))
+                    QtWidgets.QApplication.processEvents()
+                    sleep(veloz)
+                    BuscadorIngles.pushButton_4.setIcon(QtGui.QIcon('./assets/B.png'))
+                    BuscadorIngles.pushButton_4.setIconSize(QtCore.QSize(120,70))
+                else:
+                    BuscadorIngles.pushButton_6.setIcon(QtGui.QIcon('./assets/C_inferiorBlanco.png'))
+                    BuscadorIngles.pushButton_6.setIconSize(QtCore.QSize(150,90))
+                    QtWidgets.QApplication.processEvents()
+                    sleep(veloz)
+                    BuscadorIngles.pushButton_6.setIcon(QtGui.QIcon('./assets/C_inferior.png'))
+                    BuscadorIngles.pushButton_6.setIconSize(QtCore.QSize(150,90))
+
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
                 QtWidgets.QApplication.processEvents()
-                sleep(1)
+                sleep(veloz)
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 if len(palabra) == c and acumulado==palabra:
                     return 
@@ -387,6 +491,7 @@ def mostrarTransicionIngles(g,palabra):
                     continue
             else:
                 return 
+
 
 
 inicio.show()

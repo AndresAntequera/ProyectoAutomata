@@ -99,7 +99,7 @@ front: 87 12pt &quot;Arial Black&quot;;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>assets/MENU.png</normaloff>assets/MENU.png</iconset>
+           <normaloff>./assets/MENU.png</normaloff>./assets/MENU.png</iconset>
          </property>
         </widget>
        </item>
@@ -219,7 +219,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/pngwing.com.png</normaloff>assets/pngwing.com.png</iconset>
+              <normaloff>./assets/pngwing.com.png</normaloff>./assets/pngwing.com.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -248,7 +248,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/LUPA.png</normaloff>assets/LUPA.png</iconset>
+              <normaloff>./assets/LUPA.png</normaloff>./assets/LUPA.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -291,7 +291,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/España.png</normaloff>assets/España.png</iconset>
+              <normaloff>./assets/España.png</normaloff>./assets/España.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -320,13 +320,60 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/USA.webp</normaloff>assets/USA.webp</iconset>
+              <normaloff>./assets/USA.webp</normaloff>./assets/USA.webp</iconset>
             </property>
             <property name="iconSize">
              <size>
               <width>32</width>
               <height>32</height>
              </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>               SPEED </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="RadioIngles1">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>      x 0.5</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="RadioIngles2">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>      x 1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="RadioIngles3">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>      x 1.5</string>
             </property>
            </widget>
           </item>
@@ -403,7 +450,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>assets/robot.png</normaloff>assets/robot.png</iconset>
+                  <normaloff>./assets/robot.png</normaloff>./assets/robot.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -465,7 +512,7 @@ front: 87 12pt &quot;Arial Black&quot;;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>assets/LUPA.png</normaloff>assets/LUPA.png</iconset>
+                   <normaloff>./assets/LUPA.png</normaloff>./assets/LUPA.png</iconset>
                  </property>
                 </widget>
                 <widget class="QLabel" name="Etiqueta">
@@ -663,7 +710,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/AA.png</normaloff>assets/AA.png</iconset>
+                    <normaloff>./assets/AA.png</normaloff>./assets/AA.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -692,7 +739,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/A.png</normaloff>assets/A.png</iconset>
+                    <normaloff>./assets/A.jpg</normaloff>./assets/A.jpg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -721,7 +768,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/BC.png</normaloff>assets/BC.png</iconset>
+                    <normaloff>./assets/BC.png</normaloff>./assets/BC.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -749,7 +796,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/B.png</normaloff>assets/B.png</iconset>
+                    <normaloff>./assets/B.png</normaloff>./assets/B.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -777,7 +824,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/C (3).png</normaloff>assets/C (3).png</iconset>
+                    <normaloff>./assets/C(3).png</normaloff>./assets/C(3).png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -805,7 +852,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/C_inferior.png</normaloff>assets/C_inferior.png</iconset>
+                    <normaloff>./assets/C_inferior.png</normaloff>./assets/C_inferior.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -833,7 +880,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/BDerecho.png</normaloff>assets/BDerecho.png</iconset>
+                    <normaloff>./assets/BDerecho.png</normaloff>./assets/BDerecho.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>

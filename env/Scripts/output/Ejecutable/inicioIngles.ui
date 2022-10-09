@@ -244,7 +244,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
              </size>
             </property>
             <property name="text">
-             <string> SEEKER</string>
+             <string> SEARCH</string>
             </property>
             <property name="icon">
              <iconset>
@@ -352,7 +352,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
              </font>
             </property>
             <property name="text">
-             <string>Proyect - Automaton</string>
+             <string>Proyect - Automata</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>

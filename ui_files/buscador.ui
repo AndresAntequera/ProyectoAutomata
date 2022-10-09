@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>857</width>
-    <height>699</height>
+    <width>847</width>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -99,7 +99,7 @@ front: 87 12pt &quot;Arial Black&quot;;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>assets/MENU.png</normaloff>assets/MENU.png</iconset>
+           <normaloff>./assets/MENU.png</normaloff>./assets/MENU.png</iconset>
          </property>
         </widget>
        </item>
@@ -219,7 +219,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/pngwing.com.png</normaloff>assets/pngwing.com.png</iconset>
+              <normaloff>./assets/pngwing.com.png</normaloff>./assets/pngwing.com.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -248,7 +248,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/LUPA.png</normaloff>assets/LUPA.png</iconset>
+              <normaloff>./assets/LUPA.png</normaloff>./assets/LUPA.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -291,7 +291,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/España.png</normaloff>assets/España.png</iconset>
+              <normaloff>./assets/España.png</normaloff>./assets/España.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -320,7 +320,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>assets/USA.webp</normaloff>assets/USA.webp</iconset>
+              <normaloff>./assets/USA.webp</normaloff>./assets/USA.webp</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -345,89 +345,35 @@ font: 75 12pt&quot;Arial Narrow&quot;;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="lento">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>40</height>
-             </size>
+           <widget class="QRadioButton" name="Radio1">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
             </property>
             <property name="text">
-             <string>x 0.5</string>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>assets/España.png</normaloff>assets/España.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>32</width>
-              <height>32</height>
-             </size>
+             <string>    X 0.5</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="normal">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>40</height>
-             </size>
+           <widget class="QRadioButton" name="Radio2">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
             </property>
             <property name="text">
-             <string>x 1</string>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>assets/España.png</normaloff>assets/España.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>32</width>
-              <height>32</height>
-             </size>
+             <string>    X 1</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="rapido">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>40</height>
-             </size>
+           <widget class="QRadioButton" name="Radio3">
+            <property name="styleSheet">
+             <string notr="true">margin:15px auto;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
             </property>
             <property name="text">
-             <string>x 1.5</string>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>assets/España.png</normaloff>assets/España.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>32</width>
-              <height>32</height>
-             </size>
+             <string>    X 1.5</string>
             </property>
            </widget>
           </item>
@@ -504,7 +450,7 @@ font: 75 12pt&quot;Arial Narrow&quot;;
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>assets/robot.png</normaloff>assets/robot.png</iconset>
+                  <normaloff>./assets/robot.png</normaloff>./assets/robot.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -566,7 +512,7 @@ front: 87 12pt &quot;Arial Black&quot;;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>assets/LUPA.png</normaloff>assets/LUPA.png</iconset>
+                   <normaloff>./assets/LUPA.png</normaloff>./assets/LUPA.png</iconset>
                  </property>
                 </widget>
                 <widget class="QLabel" name="Etiqueta">
@@ -764,7 +710,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/AA.png</normaloff>assets/AA.png</iconset>
+                    <normaloff>./assets/AA.png</normaloff>./assets/AA.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -793,7 +739,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/A.png</normaloff>assets/A.png</iconset>
+                    <normaloff>./assets/A.jpg</normaloff>./assets/A.jpg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -822,7 +768,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/BC.png</normaloff>assets/BC.png</iconset>
+                    <normaloff>./assets/BC.png</normaloff>./assets/BC.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -850,7 +796,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/B.png</normaloff>assets/B.png</iconset>
+                    <normaloff>./assets/B.png</normaloff>./assets/B.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -878,7 +824,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/C (3).png</normaloff>assets/C (3).png</iconset>
+                    <normaloff>./assets/C.png</normaloff>./assets/C.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -906,7 +852,7 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/C_inferior.png</normaloff>assets/C_inferior.png</iconset>
+                    <normaloff>./assets/C_inferior.png</normaloff>./assets/C_inferior.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -934,12 +880,40 @@ border:0px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>assets/BDerecho.png</normaloff>assets/BDerecho.png</iconset>
+                    <normaloff>./assets/BDerecho.png</normaloff>./assets/BDerecho.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
                     <width>60</width>
                     <height>100</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_8">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>240</y>
+                    <width>81</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:0px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>./assets/Inicio.png</normaloff>./assets/Inicio.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>60</width>
+                    <height>30</height>
                    </size>
                   </property>
                  </widget>
@@ -956,6 +930,7 @@ border:0px;
                  <zorder>Q2</zorder>
                  <zorder>pushButton_4</zorder>
                  <zorder>pushButton_6</zorder>
+                 <zorder>pushButton_8</zorder>
                 </widget>
                </widget>
               </item>
