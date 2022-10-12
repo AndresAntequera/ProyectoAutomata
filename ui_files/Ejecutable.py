@@ -177,7 +177,7 @@ label_6_ingles.setStyleSheet("border: 3px solid black; border-radius: 45px;")
                 
 
 def mostrarTransicion(grafo,palabra,veloz):
-    c = 0
+    contador = 0
     nodo = 0
     acumulado = ""
     
@@ -189,7 +189,7 @@ def mostrarTransicion(grafo,palabra,veloz):
         label_1.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
     else:
         for i in palabra:
-            c+=1
+            contador+=1
             if grafo.get_edge_data("q0","q1")['A']['attr'] == i and nodo==0:
                 acumulado+=i
                 label_1.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
@@ -211,7 +211,7 @@ def mostrarTransicion(grafo,palabra,veloz):
                 sleep(veloz)
                 label_3.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 
-                if len(palabra) == c and acumulado==palabra:
+                if len(palabra) == contador and acumulado==palabra:
                     return
                 else:
                     continue
@@ -237,7 +237,7 @@ def mostrarTransicion(grafo,palabra,veloz):
                 sleep(veloz)
                 label_3.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 
-                if len(palabra) == c and acumulado==palabra:
+                if len(palabra) == contador and acumulado==palabra:
                     return
                 else:
                     continue
@@ -268,7 +268,7 @@ def mostrarTransicion(grafo,palabra,veloz):
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
                 label_5.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
-                if len(palabra) == c and acumulado==palabra:
+                if len(palabra) == contador and acumulado==palabra:
                     return 
                 else:
                     continue
@@ -294,7 +294,7 @@ def mostrarTransicion(grafo,palabra,veloz):
                 sleep(veloz)
                 label_5.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 
-                if len(palabra) == c and acumulado==palabra:
+                if len(palabra) == contador and acumulado==palabra:
                     return 
                 else:
                     continue
@@ -327,7 +327,7 @@ def mostrarTransicion(grafo,palabra,veloz):
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
                 label_5.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
-                if len(palabra) == c and acumulado==palabra:
+                if len(palabra) == contador and acumulado==palabra:
                     return 
                 else:
                     continue
@@ -336,7 +336,7 @@ def mostrarTransicion(grafo,palabra,veloz):
 
 
 def mostrarTransicionIngles(grafo,palabra,veloz):
-    c = 0
+    contador = 0
     nodo = 0
     acumulado = ""
     
@@ -347,7 +347,7 @@ def mostrarTransicionIngles(grafo,palabra,veloz):
         label_1_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
     else:
         for i in palabra:
-            c+=1
+            contador+=1
             if grafo.get_edge_data("q0","q1")['A']['attr'] == i and nodo==0:
                 acumulado+=i
                 label_1_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;background:#fff")
@@ -369,7 +369,7 @@ def mostrarTransicionIngles(grafo,palabra,veloz):
                 sleep(veloz)
                 label_3_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 
-                if len(palabra) == c and acumulado==palabra:
+                if len(palabra) == contador and acumulado==palabra:
                     return
                 else:
                     continue
@@ -395,7 +395,7 @@ def mostrarTransicionIngles(grafo,palabra,veloz):
                 sleep(veloz)
                 label_3_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 
-                if len(palabra) == c and acumulado==palabra:
+                if len(palabra) == contador and acumulado==palabra:
                     return
                 else:
                     continue
@@ -427,7 +427,7 @@ def mostrarTransicionIngles(grafo,palabra,veloz):
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
-                if len(palabra) == c and acumulado==palabra:
+                if len(palabra) == contador and acumulado==palabra:
                     return 
                 else:
                     continue
@@ -454,7 +454,7 @@ def mostrarTransicionIngles(grafo,palabra,veloz):
                 sleep(veloz)
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
                 
-                if len(palabra) == c and acumulado==palabra:
+                if len(palabra) == contador and acumulado==palabra:
                     return 
                 else:
                     continue
@@ -485,7 +485,7 @@ def mostrarTransicionIngles(grafo,palabra,veloz):
                 QtWidgets.QApplication.processEvents()
                 sleep(veloz)
                 label_5_ingles.setStyleSheet("border: 3px solid black; border-radius: 40px; text-align:center;")
-                if len(palabra) == c and acumulado==palabra:
+                if len(palabra) == contador and acumulado==palabra:
                     return 
                 else:
                     continue
